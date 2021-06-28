@@ -1,0 +1,19 @@
+## Interface: 20501
+## Title: AshUnitFrame
+## Author: kurapica125@outlook.com
+## Version: r001
+## Notes: A skin supported unit frame
+## Dependencies: Scorpio.Unit,Scorpio.Widget
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: AshUnitFrame_DB
+## SavedVariablesPerCharacter: AshUnitFrame_CharDB
+
+# Core
+AshUnitFrame.lua
+
+# Indicator
+ClassPowerIndicator.lua
+
+# Skin
+DefaultSkin.lua
