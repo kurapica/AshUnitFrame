@@ -1,7 +1,7 @@
-## Interface: 20501
+## Interface: 20502
 ## Title: AshUnitFrame
 ## Author: kurapica125@outlook.com
-## Version: r002
+## Version: r003
 ## Notes: A skin supported unit frame
 ## Dependencies: Scorpio
 ## DefaultState: Enabled
