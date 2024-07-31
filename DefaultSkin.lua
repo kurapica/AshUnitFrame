@@ -9,11 +9,7 @@
 Scorpio           "AshUnitFrame.Skin.Default"        "1.0.0"
 --========================================================--
 
------------------------------------------------------------
--- Aura Panel Icon
------------------------------------------------------------
-__Sealed__() class "AshAuraPanelIcon"   { Scorpio.Secure.UnitFrame.AuraPanelIcon }
-__Sealed__() class "AshTotemPanelIcon"  { Scorpio.Secure.UnitFrame.TotemPanelIcon}
+namespace "AshUnitFrame"
 
 -----------------------------------------------------------
 -- SHARE SETTINGS

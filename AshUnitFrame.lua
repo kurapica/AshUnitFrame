@@ -15,6 +15,12 @@ import "System.Reactive"
 
 export { strupper = string.upper }
 
+-----------------------------------------------------------
+-- Aura Panel Icon
+-----------------------------------------------------------
+__Sealed__() class "AshAuraPanelIcon"   { Scorpio.Secure.UnitFrame.AuraPanelIcon }
+__Sealed__() class "AshTotemPanelIcon"  { Scorpio.Secure.UnitFrame.TotemPanelIcon}
+
 -- The unit and hidden frames
 _BlizzardUnits                  = {
     player                      = {

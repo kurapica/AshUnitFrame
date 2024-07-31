@@ -9,6 +9,8 @@
 Scorpio          "AshUnitFrame.Indicator.ClassPower" "1.0.0"
 --========================================================--
 
+namespace "AshUnitFrame"
+
 __Sealed__() class "ClassPowerBarElement" (function(_ENV)
     inherit "CooldownStatusBar"
 
