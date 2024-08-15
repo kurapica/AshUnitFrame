@@ -1,4 +1,4 @@
-## Interface: 110000
+## Interface: 110002
 ## Title: AshUnitFrame
 ## Author: kurapica125@outlook.com
 ## Version: r003
