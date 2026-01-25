@@ -58,7 +58,7 @@ AURA_PANEL_ICON_DEBUFF_COLOR    = {
     ["Curse"]                   = Color.CURSE,
     ["Disease"]                 = Color.DISEASE,
     ["Poison"]                  = Color.POISON,
-    [""]                        = DebuffTypeColor["none"],
+    [""]                        = Color.NONEDEBUFF,
 }
 
 -----------------------------------------------------------
@@ -202,7 +202,7 @@ Style.UpdateSkin("Default",     {
             height              = BAR_HEIGHT,
             location            = { Anchor("TOPLEFT", 0, -BORDER_SIZE, nil, "BOTTOMLEFT"), Anchor("RIGHT") },
 
-            CooldownLabel       = {
+            CooldownLabel       = Scorpio.UseSecretValue and nil or {
                 fontObject      = TextStatusBarText,
                 location        = { Anchor("LEFT", 0, 0, nil, "RIGHT")},
                 autoColor       = false,
@@ -228,6 +228,7 @@ Style.UpdateSkin("Default",     {
             },
 
             IconFrame           = {
+                visible         = Wow.UnitCasting(),
                 size            = Size(16, 16),
                 location        = { Anchor("RIGHT", -2, BAR_HEIGHT, nil, "LEFT") },
                 frameStrata     = "BACKGROUND",
@@ -235,7 +236,13 @@ Style.UpdateSkin("Default",     {
                     edgeFile    = [[Interface\ChatFrame\CHATFRAMEBACKGROUND]],
                     edgeSize    = ICON_BORDER_SIZE,
                 },
-                backdropBorderColor = Wow.UnitCastInterruptible():Map(function(val) return val and CASTBAR_NORMAL_COLOR or CASTBAR_NONINTERRUPTIBLE_COLOR end),
+                backdropBorderColor = Scorpio.UseSecretValue and CASTBAR_NORMAL_COLOR or Wow.UnitCastNotInterruptible():Map(function(val) return val and CASTBAR_NONINTERRUPTIBLE_COLOR or CASTBAR_NORMAL_COLOR end),
+
+                -- for wow 12.0
+                BackdropBorderColorIfTrue = Scorpio.UseSecretValue and CASTBAR_NONINTERRUPTIBLE_COLOR or nil,
+                BackdropBorderColorIfFalse = Scorpio.UseSecretValue and CASTBAR_NORMAL_COLOR or nil,
+                BackdropBorderColorCond = Scorpio.UseSecretValue and Wow.UnitCastNotInterruptible() or nil,
+
 
                 IconTexture     = {
                     file        = Wow.UnitCastIcon(),
